@@ -1,0 +1,88 @@
+---
+import Card from '../components/Card.astro';
+import Link from '../components/Link.astro'
+import Timeline from '../components/Timeline.astro';
+import Project from '../components/Project.astro'
+import Layout from '../layouts/Layout.astro';
+import { educationTimeline, experienceTimeline, projects, socials, links } from '../lib/constants';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="w-full h-full flex items-center justify-center">
+		<main class="px-4 lg:px-0 lg:w-3/5 h-3/4 grid gap-4 2xl:grid-cols-8 2xl:grid-rows-8 lg:grid-cols-2">
+			<div class="2xl:col-span-6 2xl:row-span-3">
+				<Card>
+					<div class="h-full flex flex-col justify-center">
+						<h3 class="text-sm text-primary-600">Welcome</h3>
+						<h3 class="text-primary-400">
+							Hi 👋 I’m <span class="font-bold">Julian Villamizar</span>.  Backend developer specialized in Node.js and TypeScript, experienced in building scalable systems. Proficient in designing robust architectures and developing RESTful APIs to enhance user experience.
+						</h3>
+						<div class="mt-4 flex gap-1">
+							{
+								links.map( link => (
+									<Link text={link.text} style='primary' icon={link.icon} additionalStyles='text-2xl'/>
+								))
+							}
+					</div>	
+					</div>
+					
+				</Card>	
+			</div>
+			<div class="2xl:col-span-2 2xl:row-span-3 lg:col-span-1">
+				<Card>
+					<Timeline
+					title='Experience'
+					obj={ experienceTimeline }
+					/>
+				</Card>
+			</div>
+			<div class="2xl:col-span-2 2xl:row-span-5 2xl:col-start-7 2xl:row-start-4 lg:col-span-1">
+				<Card>
+					<Timeline
+					title='Education'
+					obj={ educationTimeline }
+					/>
+				</Card>	
+			</div>
+			<div class="2xl:col-span-2 2xl:row-span-5 lg:col-start-2 lg:row-start-1">
+				<Card>
+					<h1 class="text-primary-400">Lets work together!</h1>
+					<div class="my-2">
+						<h4 class="text-primary-600 italic">Details</h4>
+						<Link text='julianvillamizardev@gmail.com' link='mailto:julianvillamizardev@gmail.com' style='secondary'/>
+					</div>
+					<div class="my-2">
+						<h4 class="text-primary-600 italic">Socials</h4>
+						<ul class="flex flex-col gap-2">
+							{
+								socials.map( link => (
+									<Link text={link.text} link={link.href} style='secondary'/>
+								))
+							}
+						</ul>
+					</div>
+				</Card>	
+			</div>
+			<div class="2xl:col-span-4 2xl:row-span-4 lg:col-span-2">
+				<Card>
+					<h1 class="text-primary-400">Projects</h1>
+					<ul>
+						{
+							projects.map( project => (
+								<Project title={project.title} description={project.description} href={project.href}/>
+							))
+						}
+					</ul>
+				</Card>
+			</div>
+			<div class="2xl:col-span-4 2xl:row-span-1 lg:col-span-2">
+				<Card>
+					<p class="text-primary-400 text-center">Julian Villamizar &copy; 2023</p>
+				</Card>
+			</div>
+			
+			
+		</main>	
+	</div>
+	
+</Layout>

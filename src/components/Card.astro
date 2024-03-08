@@ -1,0 +1,32 @@
+---
+---
+<div class="card overflow-hidden w-full h-full p-5 bg-primary-900 border-2 border-primary-800 rounded-md hover:bg-primary-800 duration-100">
+    <slot/>
+</div>
+
+<style>
+    .card:hover{
+        animation: border-anm 2s infinite;
+    }
+
+    @keyframes border-anm {
+        0%{
+            border-top-color: #475569;
+            border-bottom-color: #475569;
+            border-right-color: #94a3b8;
+            border-left-color: #94a3b8;
+        }
+        50%{
+            border-top-color: #94a3b8;
+            border-bottom-color: #94a3b8;
+            border-right-color: #475569;
+            border-left-color: #475569;
+        }
+        100%{
+            border-top-color: #475569;
+            border-bottom-color: #475569;
+            border-right-color: #94a3b8;
+            border-left-color: #94a3b8;
+        }
+    }
+</style>

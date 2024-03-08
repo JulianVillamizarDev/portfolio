@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    text: string;
+    link?: string;
+    style: 'primary' | 'secondary';
+    icon?: string;
+    additionalStyles?: string;
+}
+
+const { text, link = '#', style, icon, additionalStyles = '' } = Astro.props;
+
+const styles = {
+    'primary': 'px-2 py-1 text-primary-400 hover:text-primary-500 hover:bg-primary-900',
+    'secondary': 'px-0 py-1 text-primary-400 hover:text-primary-200'
+};
+---
+
+<a href={link} class={`text-md rounded-md ${styles[style] } duration-150 flex items-center justify-between gap-2 ${additionalStyles}`}>
+    {
+        icon? (<Icon name={icon}/>): ''
+    }
+    {text}
+</a>
