@@ -4,10 +4,10 @@ import Link from '../components/Link.astro'
 import Timeline from '../components/Timeline.astro';
 import Project from '../components/Project.astro'
 import Layout from '../layouts/Layout.astro';
-import { educationTimeline, experienceTimeline, projects, socials, links } from '../lib/constants';
+import { educationTimeline, experienceTimeline, projects, socials } from '../utils/data';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="🚀 Julian Villamizar">
 	<div class="w-full h-full flex items-center justify-center">
 		<main class="px-4 lg:px-0 lg:w-3/5 h-3/4 grid gap-4 2xl:grid-cols-8 2xl:grid-rows-8 lg:grid-cols-2">
 			<div class="2xl:col-span-6 2xl:row-span-3">
@@ -19,8 +19,8 @@ import { educationTimeline, experienceTimeline, projects, socials, links } from 
 						</h3>
 						<div class="mt-4 flex gap-1">
 							{
-								links.map( link => (
-									<Link text={link.text} style='primary' icon={link.icon} additionalStyles='text-2xl'/>
+								socials.map( link => (
+									<Link text='' link={link.href} style='primary' icon={link.icon} additionalStyles='text-2xl'/>
 								))
 							}
 					</div>	
@@ -31,7 +31,7 @@ import { educationTimeline, experienceTimeline, projects, socials, links } from 
 			<div class="2xl:col-span-2 2xl:row-span-3 lg:col-span-1">
 				<Card>
 					<Timeline
-					title='Experience'
+					title='📋Experience'
 					obj={ experienceTimeline }
 					/>
 				</Card>
@@ -39,16 +39,16 @@ import { educationTimeline, experienceTimeline, projects, socials, links } from 
 			<div class="2xl:col-span-2 2xl:row-span-5 2xl:col-start-7 2xl:row-start-4 lg:col-span-1">
 				<Card>
 					<Timeline
-					title='Education'
+					title='🎓Education'
 					obj={ educationTimeline }
 					/>
 				</Card>	
 			</div>
 			<div class="2xl:col-span-2 2xl:row-span-5 lg:col-start-2 lg:row-start-1">
 				<Card>
-					<h1 class="text-primary-400">Lets work together!</h1>
+					<h1 class="text-primary-400">✉️ Lets work together!</h1>
 					<div class="my-2">
-						<h4 class="text-primary-600 italic">Details</h4>
+						<h4 class="text-primary-600 italic">Contact</h4>
 						<Link text='julianvillamizardev@gmail.com' link='mailto:julianvillamizardev@gmail.com' style='secondary'/>
 					</div>
 					<div class="my-2">
@@ -65,7 +65,7 @@ import { educationTimeline, experienceTimeline, projects, socials, links } from 
 			</div>
 			<div class="2xl:col-span-4 2xl:row-span-4 lg:col-span-2">
 				<Card>
-					<h1 class="text-primary-400">Projects</h1>
+					<h1 class="text-primary-400">💡Projects</h1>
 					<ul>
 						{
 							projects.map( project => (

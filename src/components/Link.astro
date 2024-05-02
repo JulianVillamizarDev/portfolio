@@ -13,13 +13,16 @@ const { text, link = '#', style, icon, additionalStyles = '' } = Astro.props;
 
 const styles = {
     'primary': 'px-2 py-1 text-primary-400 hover:text-primary-500 hover:bg-primary-900',
-    'secondary': 'px-0 py-1 text-primary-400 hover:text-primary-200'
+    'secondary': 'px-0 py-1 text-primary-400 hover:text-primary-200 hover:underline'
 };
 ---
 
-<a href={link} class={`text-md rounded-md ${styles[style] } duration-150 flex items-center justify-between gap-2 ${additionalStyles}`}>
+<a href={link} target="_blank" class={`text-md rounded-md ${styles[style] } duration-150 flex items-center justify-between gap-2 ${additionalStyles}`}>
     {
         icon? (<Icon name={icon}/>): ''
     }
-    {text}
+    <span class="inline-block overflow-hidden">
+        {text}
+    </span>
+    
 </a>
