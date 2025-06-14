@@ -11,21 +11,10 @@ Inside of the Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   ├── Card.astro
-    │   ├── Link.astro
-    │   ├── Project.astro
-    │   └── Timeline.astro
-    ├── icons/
-│   │   ├── external-link.svg
-    │   ├── github.svg
-    │   ├── linkedin.svg
-    │   └── x.svg
+│   ├── icons/
 │   ├── layouts/
-│   │   └── Layout.astro
 │   ├── lib/
-│   │   └── constants.ts
 │   ├── pages/
-│   │   └── index.astro
 └── package.json
 ```
 

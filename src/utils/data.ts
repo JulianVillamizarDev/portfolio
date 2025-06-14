@@ -48,14 +48,4 @@ export const socials = [
         icon: 'linkedin',
 		href: 'https://www.linkedin.com/in/julian-villamizar-a0a94526a'
     },
-	{
-        text: 'Instagram',
-		icon: 'instagram',
-        href: 'https://www.linkedin.com/in/julian-villamizar-a0a94526a',
-    },
-    {
-        text: 'X',
-		icon: 'x',
-        href: 'https://www.linkedin.com/in/julian-villamizar-a0a94526a',
-    },
 ];
