@@ -1,7 +1,7 @@
 export const educationTimeline = [
 	{
 		title: 'Francisco de Paula Santander university.',
-		date: '2021 - Present',
+		date: '2020 - Present',
 		description: 'Systems Engineering.'
 	},
 	{
@@ -24,6 +24,16 @@ export const projects = [
 		title: 'dentist landing page',
 		description: "Dentist landing page made with Astro, React and TailwindCSS.",
 		href: 'https://odangelavillamizar.vercel.app/',
+	},
+	{
+		title: 'Medical AI Chatbot',
+		description: "Diagnostic chatbot for medical purpose using Random Forest and Decision Tree algorithms.",
+		href: 'https://medibot-jrap.onrender.com/',
+	},
+	{
+		title: 'Country search app',
+		description: "Frontend Mentoring project, a country search app using Astro, React and TailwindCSS.",
+		href: 'https://country-searcher-gray.vercel.app/',
 	},
 ];
 
