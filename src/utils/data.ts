@@ -32,7 +32,7 @@ export const projects = [
 	},
 	{
 		title: 'Country search app',
-		description: "Frontend Mentoring project, a country search app using Astro, React and TailwindCSS.",
+		description: "Frontend Mentor Challenge, a country search app using NextJS, React and TailwindCSS.",
 		href: 'https://country-searcher-gray.vercel.app/',
 	},
 ];
