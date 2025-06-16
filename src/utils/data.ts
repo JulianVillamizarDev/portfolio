@@ -14,7 +14,7 @@ export const educationTimeline = [
 export const experienceTimeline = [
 	{
 		title: 'Consultorio Odontologico Especializado Angela Villamizar',
-		date: 'Feb 2024 - Present',
+		date: 'Apr 2024 - Present',
 		description: ''
 	},
 ];
@@ -46,6 +46,6 @@ export const socials = [
     {
         text: 'GitHub',
         icon: 'linkedin',
-		href: 'https://www.linkedin.com/in/julian-villamizar-a0a94526a'
+		href: 'https://www.linkedin.com/in/julianvillamizardev'
     },
 ];
