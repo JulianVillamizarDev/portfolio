@@ -39,12 +39,12 @@ export const projects = [
 
 export const socials = [
     {
-        text: 'LinkedIn',
+        text: 'GitHub',
         icon: 'github',
 		href: 'https://github.com/JulianVillamizarDev'
     },
     {
-        text: 'GitHub',
+        text: 'LinkedIn',
         icon: 'linkedin',
 		href: 'https://www.linkedin.com/in/julianvillamizardev'
     },
